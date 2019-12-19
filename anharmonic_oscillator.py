@@ -46,7 +46,11 @@ class AnharmonicOscillator:
         plt.plot(self.position, probability_density_norm)
         plt.show()
 
+    def get_pdf(self, level=0):
+        probability_density = self.eigenvectors[level] ** 2
+        return probability_density
+
     def get_pdf_norm_graph(self, level=0):
         probability_density = self.eigenvectors[level] ** 2
-        probability_density_norm = probability_density / self.interval_length
+        probability_density_norm = probability_density / sum(probability_density * self.interval_length)
         return probability_density_norm
