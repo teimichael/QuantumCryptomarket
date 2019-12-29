@@ -3,6 +3,8 @@ import pandas as pd
 from matplotlib import pyplot as plt
 
 
+# Yepeng Ding
+
 class AnharmonicOscillator:
 
     def __init__(self, interval_length=0.001, data_size=2000, boundary=0.5, omega=1, h_bar=1, m=1, coefficient=None):
